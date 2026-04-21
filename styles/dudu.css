@@ -1,37 +1,20 @@
-body {background-color: #FFF6CC;
-    font-family: Arial, sans-serif;
-        text-align: center;
-        margin: 100;}
-
-
-    header {
-        background-color: #75070C;
-        color: white;
-        padding: 15px;
-        display: flex;
-        justify-content: space-between;}
-
-        footer {
-        background-color: #8b0000;
-        color: white;
-        padding: 10px;
-        margin-top: 20px; }
-
 img {
-        border-radius: 10px;
-        margin: 10px 0;}
+  border-radius: 10px;
+  margin: 10px 0;
+}
 
-    section {
-        max-width: 600px;
-        margin: auto;}
-
-body a{ color: white;}
+section {
+  max-width: 600px;
+  margin: auto;
+}
 
 table {
-        margin: auto;
-        border-collapse: collapse;
-    }
+  margin: auto;
+  border-collapse: collapse;
+}
 
-    th, td {
-        border: 1px solid black;
-        padding: 5px 10px;}
+th,
+td {
+  border: 1px solid black;
+  padding: 5px 10px;
+}
