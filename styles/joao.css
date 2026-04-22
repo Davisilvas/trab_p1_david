@@ -1,43 +1,153 @@
-body{
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #fff3e0, #ffe0b2);
-    margin: 0;
-    padding: 20px;
+:root {
+  --primary: #75070c;
+  --bg: #fff6cc;
+  --card: #ffffff;
+  --text: #1f2937;
+  --subtext: #6b7280;
+  --border: #f1e5b8; /* corrigido: agora aparece */
 }
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding: 40px 20px;
+  line-height: 1.6;
+}
+
+/* Container */
 .container {
-    max-width: 800px;
-    margin: auto;
+  max-width: 860px;
+  margin: auto;
 }
-h1 {
-    text-align: center;
-    color: #bf360c;
-    font-size: 2.5em;
+
+/* Título */
+.container h1 {
+  text-align: center;
+  margin-bottom: 8px;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
 }
+
+/* Descrição */
 .descricao {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #5d4037;
+  text-align: center;
+  color: var(--subtext);
+  margin-bottom: 32px;
+  font-size: 15px;
 }
+
+/* Cards */
 .card {
-    background: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1)
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 18px;
+  transition: all 0.25s ease;
+  position: relative;
 }
+
+/* Hover mais elegante */
 .card:hover {
-    transform: scale(1.02);
+  border-color: var(--primary);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
 }
-h2 {
-    color: #e65100;
+
+/* Destaque lateral */
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 3px;
+  height: calc(100% - 20px);
+  background: transparent;
+  border-radius: 10px;
+  transition: 0.3s;
 }
-ul, ol {
-    padding-left: 20px;
+
+.card:hover::before {
+  background: var(--primary);
 }
+
+/* Títulos */
+.card h2 {
+  font-size: 17px;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+/* Listas */
+.card ul,
+.card ol {
+  padding-left: 18px;
+  color: var(--subtext);
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+/* Destaque (versão sem ovo) */
 .destaque {
-    background: #fff8e1;
-    border-left: 5px solid #ff9800;
+  border: 1px solid #bbf7d0;
+  background: #f0fdf4;
 }
-.sem sublinhado {
-    text-decoration: none;
+
+.destaque::before {
+  background: #16a34a;
+}
+
+.destaque h2 {
+  color: #166534;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+footer a:hover {
+  opacity: 0.8;
+}
+.btn-voltar {
+  display: inline-block;
+  padding: 10px 18px;
+  background: var(--primary);
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+/* Hover */
+.btn-voltar:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* Clique */
+.btn-voltar:active {
+  transform: scale(0.97);
 }
